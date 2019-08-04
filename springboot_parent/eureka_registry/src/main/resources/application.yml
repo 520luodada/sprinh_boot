@@ -1,0 +1,20 @@
+server:
+  port: 10086
+spring:
+  application:
+    name: eureka-server
+eureka:
+
+
+  #  服务续约  如果超过这个时间  将会移除
+  instance:
+    lease-expiration-duration-in-seconds: 20
+    lease-renewal-interval-in-seconds: 5
+  client:
+
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+      # 是否需要注册到注册中心
+    fetch-registry: false
+
+
